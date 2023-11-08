@@ -25,4 +25,19 @@ public class CoordinateServiceImpl implements CoordinateService {
     public List<Coordinate> getCoordinate() {
         return coordinateRepository.findAll();
     }
+
+    @Override
+    public Coordinate getCoordinate(String carNum) {
+        return (Coordinate) coordinateRepository.findAll();
+    }
+
+    @Override
+    public void coordinateCreateNew(Double latidude1, Double longitude1, String carNum1) {
+        Coordinate coordinate = new Coordinate();
+        coordinate.setLatitude(latidude1);
+        coordinate.setLongitude(longitude1);
+        coordinate.setCarNum(carNum1);
+        coordinateRepository.save(coordinate);
+
+    }
 }

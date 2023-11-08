@@ -11,4 +11,8 @@ public interface CoordinateService {
     Coordinate coordinateCreateNew(CoordinateCreateModel coordinateCreateModel);
 
     List<Coordinate> getCoordinate();
+
+    Coordinate getCoordinate(String carNum);
+
+    void coordinateCreateNew(Double latidude1, Double longitude1, String carNum1);
 }
