@@ -24,7 +24,7 @@ public class HistoryServiceImpl implements HistoryService {
         history.setLatitude(latidude1);
         history.setLongitude(longitude1);
         history.setCarNum(carNum1);
-        history.setInTime(Timestamp.valueOf(LocalDateTime.now()));
+        history.setInTime(LocalDateTime.now());
         historyRepository.save(history);
     }
 }

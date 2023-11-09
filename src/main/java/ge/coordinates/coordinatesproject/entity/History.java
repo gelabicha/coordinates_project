@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
@@ -26,5 +27,5 @@ public class History {
     private String carNum;
 
     @Column(name = "intime")
-    private Timestamp inTime;
+    private LocalDateTime inTime;
 }
